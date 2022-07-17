@@ -1,0 +1,58 @@
+package common
+
+// 재화 타입 선언
+const (
+	NONE = iota + 0
+	GOLD
+	SPIN
+	MULTIPLESPINCOUNTADD
+	MAXSPIN
+)
+
+// 공지 타입 선언
+const (
+	NOTI_NONE = iota + 0
+	NOTI_MORNITORING
+	NOTI_REWARD
+	NOTI_EVENT
+)
+
+// 멘션 미션 타입
+const (
+	MISSION_GET_GOLD = iota + 0
+	MISSION_SPEND_GOLD
+	MISSION_SPEND_SPIN
+	MISSION_TRY_RAID
+	MISSION_TRY_ATTACK
+	MISSION_TRY_SUPER_ATTACK
+	MISSION_COMPLETE_CHAPTER
+	MISSION_BUILDING
+	MISSION_PLACEMENT_MANSION_ITEM
+	MISSION_GET_MANSION_ITEM
+)
+
+var MAX_FRIEND int
+var MANSION_LIKE int
+
+// 시간 정의
+type TIME_UNIT int
+
+const (
+	TIME_SECOND TIME_UNIT = iota + 0
+	TIME_MINUTE
+	TIME_HOUR
+	TIME_DATE
+)
+
+// 시간 비교 정의
+type TIME_TYPE int
+
+const (
+	TIME_COMPARE_OLDER TIME_TYPE = iota + 0
+	TIME_COMPARE_EARLYER
+)
+
+func Init() {
+	MAX_FRIEND = 50  // 멘션 친구 최대값
+	MANSION_LIKE = 5 // 멘션 좋아요 1일 초기화 값
+}
